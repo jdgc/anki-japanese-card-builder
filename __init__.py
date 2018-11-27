@@ -21,11 +21,10 @@ def generateFromList():
     fileName = QFileDialog.getOpenFileName(mw, "Select Text File", "/", "Text files (*.txt)")[0]
     
     # set 
-    if fileName is None:
-      showInfo("Please select a file." % fileName)
-      return
-    else:
+    if fileName:
       ConvertList.build(fileName, dictionary, sentences)
+    else:
+      return
 
     # select target deck
     deckName = config["deckName"]
@@ -42,7 +41,7 @@ def generateFromList():
     ti.initMapping()
     ti.run()
     mw.reset()
-    showInfo("imported successfully!")
+    showInfo("Imported Successfully!")
 
 action = QPushButton("Generate from list", mw)
 action.setMinimumSize(200, 20)
