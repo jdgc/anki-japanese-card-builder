@@ -14,6 +14,6 @@ to generate cards with dictionary definitions, readings and sentences. The only 
 ## Data Source
 
 Dictionary lookup is performed with the [JMdict/EDICT](http://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project) dictionary.  
-Sentences are sourced from the Tatoeba project hosted at [tatoeba.org](tatoeba.org)
+Sentences are sourced from the Tatoeba project hosted at [tatoeba.org](https://tatoeba.org)
 
 
