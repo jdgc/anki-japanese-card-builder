@@ -16,8 +16,9 @@ class ConvertList:
       word = next((word for word in dictionary if word.kanji == item), '')
       if not word:
         continue
-      sentence = next((pair.A for pair in sentences if pair.ismatch(item)), '')
-      string = item + "," + word.reading + "," + word.english + "," + sentence
+      sentence = next((pair.original() for pair in sentences if pair.ismatch(item)), '')
+      translation = next((pair.translation() for pair in sentences if pair.ismatch(item)), '')
+      string = item + "," + word.reading + "," + word.english + "," + sentence + "," + translation
       converted.append(string)
 
     with open(convertedFile, 'w', encoding='utf-8', errors='ignore') as f:
