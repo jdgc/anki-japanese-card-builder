@@ -1,4 +1,4 @@
-# Anki-List-Convert
+# Anki Japanese Card Builder
 Anki 2.1 addon that generates and populates JP > EN flashcards from a .txt list
 
 ## Setup
